@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Jakob Baumgärtner – Digital Strategy & Transformation Consulting</title>
   <meta name="description" content="Jakob Baumgärtner berät Unternehmen bei der digitalen Transformation, Prozessoptimierung und dem strategischen Einsatz digitaler Technologien.">
+  <meta name="robots" content="noindex, nofollow, noarchive, noimageindex, nositelinkssearchbox">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <meta name="bingbot" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -292,12 +295,12 @@
         <img src="/jakob.jpg" alt="Jakob Baumgärtner" class="contact-photo" width="72" height="72">
         <p class="contact-name">Jakob Baumgärtner</p>
         <p class="contact-role">Freiberuflicher Unternehmensberater</p>
-        <a href="mailto:jakob@baumgaertner.pro" class="contact-link">
+        <a href="#" class="contact-link" id="mail-link">
           <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <rect x="2" y="4" width="20" height="16" rx="2"/>
             <path d="m2 7 10 7 10-7"/>
           </svg>
-          jakob@baumgaertner.pro
+          <span id="mail-text">E-Mail anzeigen</span>
         </a>
       </div>
     </div>
@@ -311,5 +314,18 @@
   <p>baumgaertner.pro</p>
 </footer>
 
+<script>
+  // E-Mail vor Scraping schützen: wird erst bei Klick zusammengesetzt
+  const u = 'jakob', d = 'baumgaertner.pro';
+  const link = document.getElementById('mail-link');
+  const text = document.getElementById('mail-text');
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const email = u + '@' + d;
+    this.href = 'mailto:' + email;
+    text.textContent = email;
+    this.removeEventListener('click', arguments.callee);
+  });
+</script>
 </body>
 </html>
