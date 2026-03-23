@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Jakob Baumgärtner – KI-Integration für Unternehmen</title>
+  <meta name="description" content="Jakob Baumgärtner berät Unternehmen bei der strategischen Integration von Künstlicher Intelligenz in Prozesse, Teams und Produkte.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"></noscript>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0C0C0E;
+      --bg2:      #141417;
+      --text:     #E8E5DF;
+      --muted:    rgba(232,229,223,0.45);
+      --accent:   #7B9EFF;
+      --border:   rgba(232,229,223,0.1);
+    }
+
+    html, body {
+      height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── LAYOUT ── */
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      padding: clamp(3rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+      gap: 0;
+    }
+
+    /* ── HEADER BLOCK ── */
+    .header-block {
+      border-left: 2px solid var(--accent);
+      padding-left: 2rem;
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+
+    .label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: rgba(232,229,223,0.6);
+    }
+
+    .tagline {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 520px;
+    }
+
+    /* ── CONTENT GRID ── */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+
+    /* ── WHAT I DO ── */
+    .services-block { }
+
+    .section-title {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .service-list li:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .service-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 0.8rem;
+      color: var(--accent);
+      flex-shrink: 0;
+      min-width: 1.5rem;
+    }
+
+    /* ── CONTACT BLOCK ── */
+    .contact-block {
+      padding-top: 0.25rem;
+    }
+
+    .contact-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      position: sticky;
+      top: 2rem;
+    }
+
+    .contact-card .section-title {
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: 0.25rem;
+      line-height: 1.2;
+    }
+
+    .contact-role {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--muted);
+      margin-bottom: 1.75rem;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+
+    .contact-link:last-child {
+      border-bottom: none;
+    }
+
+    .contact-link:hover {
+      color: var(--accent);
+    }
+
+    .contact-icon {
+      width: 16px;
+      height: 16px;
+      opacity: 0.5;
+      flex-shrink: 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem clamp(1.5rem, 5vw, 4rem);
+      padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-block {
+        order: -1;
+      }
+
+      .contact-card {
+        position: static;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+<main>
+
+  <div class="header-block">
+    <p class="label">Unternehmensberatung · KI-Integration</p>
+    <h1>Jakob<br>Baumgärtner<br><em>& KI.</em></h1>
+    <p class="tagline">Ich helfe Unternehmen dabei, Künstliche Intelligenz dort einzusetzen wo sie wirklich wirkt — in Prozessen, Teams und Produkten.</p>
+  </div>
+
+  <div class="content-grid">
+
+    <div class="services-block">
+      <p class="section-title">Was ich tue</p>
+      <ul class="service-list">
+        <li>
+          <span class="service-num">01</span>
+          KI-Potenzialanalyse — wo lohnt sich der Einsatz wirklich
+        </li>
+        <li>
+          <span class="service-num">02</span>
+          Strategieentwicklung für den schrittweisen KI-Einstieg
+        </li>
+        <li>
+          <span class="service-num">03</span>
+          Tool-Auswahl & Implementierungsbegleitung
+        </li>
+        <li>
+          <span class="service-num">04</span>
+          Team-Enablement — Mitarbeitende abholen und befähigen
+        </li>
+        <li>
+          <span class="service-num">05</span>
+          Prozessautomatisierung mit messbarem ROI
+        </li>
+      </ul>
+    </div>
+
+    <div class="contact-block">
+      <div class="contact-card">
+        <p class="section-title">Kontakt</p>
+        <p class="contact-name">Jakob Baumgärtner</p>
+        <p class="contact-role">Unternehmensberater · KI-Integration</p>
+        <a href="mailto:jakob@baumgaertner.pro" class="contact-link">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m2 7 10 7 10-7"/>
+          </svg>
+          jakob@baumgaertner.pro
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Jakob Baumgärtner</p>
+  <p>baumgaertner.pro</p>
+</footer>
+
+</body>
+</html>
