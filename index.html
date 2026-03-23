@@ -154,6 +154,17 @@
       margin-bottom: 1.25rem;
     }
 
+    .contact-photo {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 1rem;
+      border: 2px solid var(--border);
+      filter: grayscale(20%);
+    }
+
     .contact-name {
       font-family: 'DM Serif Display', serif;
       font-size: 1.4rem;
@@ -278,6 +289,7 @@
     <div class="contact-block">
       <div class="contact-card">
         <p class="section-title">Kontakt</p>
+        <img src="/jakob.jpg" alt="Jakob Baumgärtner" class="contact-photo" width="72" height="72">
         <p class="contact-name">Jakob Baumgärtner</p>
         <p class="contact-role">Unternehmensberater · KI-Integration</p>
         <a href="mailto:jakob@baumgaertner.pro" class="contact-link">
